@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Company Profile System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider_css.css">
+
+</head>
+<body>
+<div id="sectionTitle">
+    <p>Company Profile System</p>
+</div>
+<div class="sectionNav">
+    <div id="sectionLogo">
+        <a href="index.html">
+            <img src="images/Logo.jpg" alt="Logo">
+        </a>
+    </div>
+    <div id="sectionMenu">
+        <button class="button button2" onclick="goNewPage('index.html')" >Home</button>
+        <button class="button button2" onclick="goNewPage('employee.html')" >Employees</button>
+        <button class="button button2" onclick="goNewPage('job.html')" >Job details</button>
+        <button class="button button2" onclick="goNewPage('product.html')">Products</button>
+        <button class="button button2" onclick="goNewPage('contact.html')">Contact</button>
+    </div>
+</div>
+<div id="sectionTop">
+
+</div>
+<div id="sectionBody">
+
+    <div class="carousel-parent">
+        <div class="left">
+            <div id="section_slider">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="images/slider/img_nature_wide.jpg" style="width:100%">
+                        <!--                        <div class="text">Caption Text</div>-->
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="images/slider/img_snow_wide.jpg" style="width:100%">
+                        <!--                        <div class="text">Caption Two</div>-->
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="images/slider/img_mountains_wide.jpg" style="width:100%">
+                        <!--                        <div class="text">Caption Three</div>-->
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+
+            </div>
+        </div>
+        <div class="right">
+            <div id="section_description">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="sectionFooter">
+    <div id="sectionSocial">
+        <p>Social links</p>
+        <img src="images/fb.png" alt="Facebook">
+        <img src="images/twitter.png" alt="Twitter">
+        <img src="images/whatsapp.png" alt="Whatsapp">
+    </div>
+    <p>Developed by@Susmita Biswas</p>
+</div>
+</body>
+
+
+<script>
+    let captions = [
+        {
+            id: 1,
+            caption: '1 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes'
+        },
+        {
+            id: 2,
+            caption: '2 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes'
+        },
+        {
+            id: 3,
+            caption: '3 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes'
+        }
+    ]
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function goNewPage(value){
+        window.location.href = value
+    }
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+
+        let captionText = captions[slideIndex - 1].caption
+        document.getElementById("section_description").textContent = captionText
+    }
+</script>
+</html>

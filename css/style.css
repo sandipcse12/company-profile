@@ -1,0 +1,111 @@
+
+div#sectionTitle {
+    background-color: #ededed;
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+}
+#sectionTitle p {
+    padding: 15px;
+    color: #2078fd;
+}
+div.sectionNav {
+    display: block;
+}
+
+div#sectionLogo {
+    width: 10%;
+    float: left;
+}
+
+div#sectionMenu {
+    float: right;
+    background-color: #9a9b9a;
+    text-align: center;
+    width: 90%;
+    padding: 3px;
+}
+
+div#sectionBody {
+    margin-bottom:10px;
+    font-size: 20px;
+    /*text-align: center;*/
+}
+
+div#sectionFooter {
+    font-size: 20px;
+    text-align: center;
+    background: #ededed;
+}
+
+.button {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: sticky;
+    border-radius: 10px;
+}
+
+.button1 {
+    font-size: 16px;
+}
+
+.button2 {
+    font-size: 25px;
+}
+
+
+.sectionNav {
+    height: 72px;
+}
+
+#sectionLogo {
+    height: 100%;
+}
+
+#sectionLogo img {
+    height: 100%;
+    width: 100%;
+}
+
+#sectionSocial img{
+    width: 40px;
+    height:auto;
+    border-radius: 5px
+}
+
+#sectionFooter p{
+    padding: 10px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carousel-parent{
+    height: 300px;
+}
+.carousel-parent .left{
+    width: 50%;
+    float: left;
+    padding: 20px;
+}
+
+.carousel-parent .right{
+    width: 50%;
+    float: right;
+    font-style: italic;
+    color: #5a5e5d;
+    padding: 20px;
+}
+
+#section_description{
+    padding: 10px;
+}
